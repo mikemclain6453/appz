@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta charset="utf-8">
 
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/app.js"></script>
+    </head>
 
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/app.js"></script>
-</head>
-<body>
-    <div data-role="view">
+    <body>
+        <div data-role="view" data-model="listview" data-title="Books">
+            <div data-role="navbar">
+                <span data-role="view-title">
+                </span>
+                <button data-role="button" data-align="right" data-bind="click:addImage">Get Pix</button>
+            </div>
+            <ul id="images"></ul>
+            <script src="https://bs-static.cdn.telerik.com/1.2.5/everlive.all.min.js"></script>
+        </div>
+        <div data-role="layout" data-id="main-layout">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <a span data-role="view-title">
+                        <div data-role="layout" data-id="back-layout">
+                            <div data-role="header">
+                                <div data-role="navbar">
+                                    <a data-role="button" data-align="left" data-icon="rewind">Back</a>
+                                    <span data-role="view-title">
+                                    </span>
+                                </div>
+                            </div>
 
+                            <ul data-role="listview">
+                                <li>a href="#index" data-icon="home">Home
+                    </a>
+                    <li>
+                    <li>
+                    <a href="views/favorites.html" data-icon="favorites">Favorites</a>
+                    <li>
+                    <li>
+                    <a href="views/about.html" data-icon="globe">About</a>
+                    <li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <div data-role="layout" data-id="back-layout">
+        <div data-role="header">
+            <div data-role="navbar">
+                <a data-role="button" data-align="left" data-icon="rewind">Back</a>
+                <span data-role="view-title"></span>
+            </div>
+        </div>
     </div>
-</body>
 </html>
